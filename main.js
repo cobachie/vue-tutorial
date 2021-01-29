@@ -19,6 +19,9 @@ const app = new Vue({
   data: {
     todos: []
   },
+  created() {
+    this.todos = todoStorage.fetch()
+  },
   methods: {
     add(event, value) {
       const comment = this.$refs.comment

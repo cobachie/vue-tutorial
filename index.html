@@ -7,6 +7,11 @@
   </head>
   <body>
     <div id="app">
+      <form class="add-form" v-on:submit.prevent="add">
+        <input type="text" ref="comment">
+        <button type="submit">追加</button>
+      </form>
+
       <table>
         <thead>
           <tr>

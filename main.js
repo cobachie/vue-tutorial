@@ -33,5 +33,15 @@ const app = new Vue({
 
       comment.value = ""
     }
+  },
+  watch: {
+    // ref: https://jp.vuejs.org/v2/api/#watch
+    todos: {
+      // 深い階層のwatchを行う場合はhandlerとdeepオプションが必要
+      handler: function(todos) {
+        todoStorage.save(todos)
+      },
+      deep: true
+    }
   }
 })

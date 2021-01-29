@@ -35,6 +35,9 @@ const app = new Vue({
       })
 
       comment.value = ""
+    },
+    changeState: function(item) {
+      item.state = item.state ? 0 : 1
     }
   },
   watch: {

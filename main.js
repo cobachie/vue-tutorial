@@ -38,6 +38,10 @@ const app = new Vue({
     },
     changeState: function(item) {
       item.state = item.state ? 0 : 1
+    },
+    remove: function(item) {
+      const index = this.todos.indexOf(item)
+      this.todos.splice(index, 1)
     }
   },
   watch: {

@@ -12,6 +12,10 @@
         <button type="submit">追加</button>
       </form>
 
+      <label v-for="label in options">
+        <input type="radio" v-model="current" :value="label.value">{{ label.label }}
+      </label>
+
       <table>
         <thead>
           <tr>

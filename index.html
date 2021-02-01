@@ -30,7 +30,7 @@
             <th>{{ item.id }}</th>
             <td>{{ item.comment }}</td>
             <td class="state">
-              <button @click="changeState(item)">{{ item.state }}<button>
+              <button @click="changeState(item)">{{ labels[item.state] }}<button>
             </td>
             <td class="button">
               <!-- 削除ボタンのモック -->
